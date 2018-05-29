@@ -80,3 +80,29 @@ int main()
     return 0;
 }
 ```
+
+## 获取最小等级
+用set获取套装中的最小等级
+```c++
+#include <iostream>
+#include <set>
+
+int main()
+{
+    std::set<int> get_min_level_set;
+    int a[10] = { 5, 2, 55, 6, 1, 555, 14, 88, 99, 100 };
+    for (int i = 0; i < 10; i++)
+    {
+        get_min_level_set.insert(a[i]);
+    }
+    if (get_min_level_set.size() > 0)
+    {
+        int min_level = *(get_min_level_set.begin());
+        std::cout << "min_level: " << min_level << std::endl;
+    }
+
+
+    return 0;
+}
+~ 
+```
