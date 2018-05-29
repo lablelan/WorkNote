@@ -1,0 +1,89 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "",
+            "title": "\u4e3b\u9875"
+        },
+        {
+            "location": "/Vim/replace/",
+            "text": "\u67e5\u627e\u5b57\u7b26\u4e32\n\n\n#\n \n\u7528\n/\n\u67e5\u627estr\u5b57\u7b26\u4e32\n\n\n/str\n\n\n#\n \n\u7528\n\uff1f\n\u67e5\u627estr\u5b57\u7b26\u4e32\n\n\n?\nstr\n\n\n\n\n\n\n\u8bbe\u7f6e\u67e5\u627e\u662f\u5426\u533a\u5206\u5927\u5c0f\u5199\n\n\n#\n \n\u4e0d\u533a\u5206\u5927\u5c0f\u5199\n\n\n:\nset\n \nic\n\n\n#\n \n\u533a\u5206\u5927\u5c0f\u5199\n\n\n:\nset\n \nnoic\n\n\n\n\n\n\n\u66ff\u6362\n\n\n#\n \n\u66ff\u6362\u5f53\u524d\u884c\u7b2c\u4e00\u4e2astr1\u4e3astr2\n\n\n:\ns\n/\nstr1\n/\nstr2\n\n\n#\n \n\u66ff\u6362\u5f53\u524d\u884c\u6240\u6709str1\u4e3astr2\n\n\n:\ns\n/\nstr1\n/\nstr2\n/\ng\n\n\n#\n \n\u66ff\u6362\u5f53\u524d\u6587\u672c\u4e2d\u6240\u6709str1\u4e3astr2\n\n\n:%\ns\n/\nstr1\n/\nstr2\n/\ng",
+            "title": "\u5b57\u7b26\u4e32\u641c\u7d22\u66ff\u6362"
+        },
+        {
+            "location": "/Vim/replace/#_1",
+            "text": "#   \u7528 / \u67e5\u627estr\u5b57\u7b26\u4e32  /str  #   \u7528 \uff1f \u67e5\u627estr\u5b57\u7b26\u4e32  ? str",
+            "title": "\u67e5\u627e\u5b57\u7b26\u4e32"
+        },
+        {
+            "location": "/Vim/replace/#_2",
+            "text": "#   \u4e0d\u533a\u5206\u5927\u5c0f\u5199  : set   ic  #   \u533a\u5206\u5927\u5c0f\u5199  : set   noic",
+            "title": "\u8bbe\u7f6e\u67e5\u627e\u662f\u5426\u533a\u5206\u5927\u5c0f\u5199"
+        },
+        {
+            "location": "/Vim/replace/#_3",
+            "text": "#   \u66ff\u6362\u5f53\u524d\u884c\u7b2c\u4e00\u4e2astr1\u4e3astr2  : s / str1 / str2  #   \u66ff\u6362\u5f53\u524d\u884c\u6240\u6709str1\u4e3astr2  : s / str1 / str2 / g  #   \u66ff\u6362\u5f53\u524d\u6587\u672c\u4e2d\u6240\u6709str1\u4e3astr2  :% s / str1 / str2 / g",
+            "title": "\u66ff\u6362"
+        },
+        {
+            "location": "/gdb/gdb/",
+            "text": "\u8c03\u8bd5core\n\n\ngbd\n \nprocess_name\n \ncore_file_name\n\n\ngdb\n \n-\nc\n \ncore_file_name\n \nprocess_name\n\n\n\n\n\n\n\u65ad\u70b9\n\n\nb \u65ad\u70b9\nc \u6267\u884c\np \u6253\u5370\nq \u53d6\u6d88\n\n\ngdb.txt:\n\n\nb\n \n\u51fd\u6570\u540d\n\n\nc\n\n\np\n \n\u53d8\u91cf\n\n\n(\n\u5176\u4ed6\u64cd\u4f5c\n)\n\n\nq\n\n\n\n\n\n\n\u67e5\u770b\u8fdb\u7a0bid\uff1a\n\n\nps\n \n-\naux\n \n|\n \ngrep\n \n`pwd`\n             \n#\n \n\u6ce8\u610f\u7b26\u53f7\n \n` \u4e0d\u662f\u5355\u5f15\u53f7 \u2019\n\n\n\n\n\n\ngdb\u65ad\u70b9\uff1a\n\n\ngdb\n \n-\np\n \n\u8fdb\u7a0bid\n \n-\nx\n \ngdb\n.\ntxt",
+            "title": "\u5e38\u7528\u547d\u4ee4"
+        },
+        {
+            "location": "/gdb/gdb/#core",
+            "text": "gbd   process_name   core_file_name  gdb   - c   core_file_name   process_name",
+            "title": "\u8c03\u8bd5core"
+        },
+        {
+            "location": "/gdb/gdb/#_1",
+            "text": "b \u65ad\u70b9\nc \u6267\u884c\np \u6253\u5370\nq \u53d6\u6d88  gdb.txt:  b   \u51fd\u6570\u540d  c  p   \u53d8\u91cf  ( \u5176\u4ed6\u64cd\u4f5c )  q   \u67e5\u770b\u8fdb\u7a0bid\uff1a  ps   - aux   |   grep   `pwd`               #   \u6ce8\u610f\u7b26\u53f7   ` \u4e0d\u662f\u5355\u5f15\u53f7 \u2019   gdb\u65ad\u70b9\uff1a  gdb   - p   \u8fdb\u7a0bid   - x   gdb . txt",
+            "title": "\u65ad\u70b9"
+        },
+        {
+            "location": "/Sql/mysql/",
+            "text": "\u521b\u5efa\u8868\n\n\nCREATE\n \nTABLE\n \n`role_attr_detail6`\n \n(\n\n\n`role_attr_detail6_id`\n  \nbigint\n(\n20\n)\n \nNOT\n \nNULL\n \nAUTO_INCREMENT\n \n,\n\n\n`role_id`\n  \nint\n(\n11\n)\n \nNOT\n \nNULL\n \nDEFAULT\n \n0\n \n,\n\n\nPRIMARY\n \nKEY\n \n(\n`role_attr_detail6_id`\n)\n\n\n)\n\n\nENGINE\n=\nInnoDB\n\n\nDEFAULT\n \nCHARACTER\n \nSET\n=\nutf8\n \nCOLLATE\n=\nutf8_general_ci\n\n\nROW_FORMAT\n=\nCompact\n\n\n;\n\n\nINSERT\n \nINTO\n \nrole_attr_detail6\n(\nrole_attr_detail6_id\n,\nrole_id\n)\n \nSELECT\n \nrole_attr_detail5_id\n,\nrole_id\n \nFROM\n \nrole_attr_detail5\n;\n\n\n\n\n\n\n\u4fee\u6539\u5b57\u6bb5\u5927\u5c0f\n\n\nALTER\n \nTABLE\n \n`role_attr_detail4`\n \nMODIFY\n \nCOLUMN\n \n`huashen_data`\n  \nvarbinary\n(\n4096\n)\n \nNOT\n \nNULL\n \nDEFAULT\n \n''\n \nAFTER\n \n`image_promotion_data`\n;\n\n\n\n\n\n\n\u6e05\u9664\u5b57\u6bb5\u6570\u636e\n\n\n-- \u65b9\u6cd51\n\n\nupdate\n \nrole_attr_detail\n \nSET\n \nroleactivity_data\n \n=\n \n'0'\n;\n\n\n-- \u65b9\u6cd52\n\n\nupdate\n \nrole_attr_detail2\n \nSET\n \nmount_data\n \n=\n \n''\n;\n\n\n\n\n\n\n\u6e05\u7a7a\u8868\u6570\u636e\n\n\n-- \u6e05\u7a7a\u5168\u90e8\u6570\u636e\uff0c\u4e0d\u5199\u65e5\u5fd7\uff0c\u4e0d\u53ef\u6062\u590d\uff0c\u901f\u5ea6\u6781\u5feb\n\n\ntruncate\n \ntable\n \n\u8868\u540d\n;\n\n\n-- \u6e05\u7a7a\u5168\u90e8\u6570\u636e\uff0c\u5199\u65e5\u5fd7\uff0c\u6570\u636e\u53ef\u6062\u590d\uff0c\u901f\u5ea6\u6162\n\n\ndelete\n \nfrom\n \n\u8868\u540d\n\n\n\n\n\n\n\u5220\u9664\u8868\u4e2d\u4e00\u5217\n\n\nalter\n \ntable\n \ncamp\n \ndrop\n \ncolumn\n \nking_data\n;\n\n\n\n\n\n\n\u5b57\u6bb5\u91cd\u547d\u540d\n\n\nALTER\n \nTABLE\n \n`worldstatus`\n \nCHANGE\n \nCOLUMN\n \n`cross_guildbattle_data`\n \n`cross_camp_battle_data`\n  \nvarbinary\n(\n1024\n)\n \nNOT\n \nNULL\n \nDEFAULT\n \n''\n \nAFTER\n \n`global_cd_data`\n;",
+            "title": "Mysql"
+        },
+        {
+            "location": "/Sql/mysql/#_1",
+            "text": "CREATE   TABLE   `role_attr_detail6`   (  `role_attr_detail6_id`    bigint ( 20 )   NOT   NULL   AUTO_INCREMENT   ,  `role_id`    int ( 11 )   NOT   NULL   DEFAULT   0   ,  PRIMARY   KEY   ( `role_attr_detail6_id` )  )  ENGINE = InnoDB  DEFAULT   CHARACTER   SET = utf8   COLLATE = utf8_general_ci  ROW_FORMAT = Compact  ;  INSERT   INTO   role_attr_detail6 ( role_attr_detail6_id , role_id )   SELECT   role_attr_detail5_id , role_id   FROM   role_attr_detail5 ;",
+            "title": "\u521b\u5efa\u8868"
+        },
+        {
+            "location": "/Sql/mysql/#_2",
+            "text": "ALTER   TABLE   `role_attr_detail4`   MODIFY   COLUMN   `huashen_data`    varbinary ( 4096 )   NOT   NULL   DEFAULT   ''   AFTER   `image_promotion_data` ;",
+            "title": "\u4fee\u6539\u5b57\u6bb5\u5927\u5c0f"
+        },
+        {
+            "location": "/Sql/mysql/#_3",
+            "text": "-- \u65b9\u6cd51  update   role_attr_detail   SET   roleactivity_data   =   '0' ;  -- \u65b9\u6cd52  update   role_attr_detail2   SET   mount_data   =   '' ;",
+            "title": "\u6e05\u9664\u5b57\u6bb5\u6570\u636e"
+        },
+        {
+            "location": "/Sql/mysql/#_4",
+            "text": "-- \u6e05\u7a7a\u5168\u90e8\u6570\u636e\uff0c\u4e0d\u5199\u65e5\u5fd7\uff0c\u4e0d\u53ef\u6062\u590d\uff0c\u901f\u5ea6\u6781\u5feb  truncate   table   \u8868\u540d ;  -- \u6e05\u7a7a\u5168\u90e8\u6570\u636e\uff0c\u5199\u65e5\u5fd7\uff0c\u6570\u636e\u53ef\u6062\u590d\uff0c\u901f\u5ea6\u6162  delete   from   \u8868\u540d",
+            "title": "\u6e05\u7a7a\u8868\u6570\u636e"
+        },
+        {
+            "location": "/Sql/mysql/#_5",
+            "text": "alter   table   camp   drop   column   king_data ;",
+            "title": "\u5220\u9664\u8868\u4e2d\u4e00\u5217"
+        },
+        {
+            "location": "/Sql/mysql/#_6",
+            "text": "ALTER   TABLE   `worldstatus`   CHANGE   COLUMN   `cross_guildbattle_data`   `cross_camp_battle_data`    varbinary ( 1024 )   NOT   NULL   DEFAULT   ''   AFTER   `global_cd_data` ;",
+            "title": "\u5b57\u6bb5\u91cd\u547d\u540d"
+        },
+        {
+            "location": "/Linux/common_shell/",
+            "text": "\u6740\u6b7b\u50f5\u5c38\u8fdb\u7a0b\n\n\n\u67e5\u770b\u8fdb\u7a0b\u5360\u7528\u7aef\u53e3\uff1a\n\n\nps\n \n-\naux\n \n|\n \ngrep\n \npname\n(\n\u8fdb\u7a0b\u540d\n)\n\n\n\n\n\n\n\u6740\u6b7b\u8fdb\u7a0b\uff1a\n\n\nkill\n \n-\n9\n \npid\n(\n\u8fdb\u7a0bid\n)",
+            "title": "\u5e38\u7528Shell\u547d\u4ee4"
+        },
+        {
+            "location": "/Linux/common_shell/#_1",
+            "text": "\u67e5\u770b\u8fdb\u7a0b\u5360\u7528\u7aef\u53e3\uff1a  ps   - aux   |   grep   pname ( \u8fdb\u7a0b\u540d )   \u6740\u6b7b\u8fdb\u7a0b\uff1a  kill   - 9   pid ( \u8fdb\u7a0bid )",
+            "title": "\u6740\u6b7b\u50f5\u5c38\u8fdb\u7a0b"
+        }
+    ]
+}
