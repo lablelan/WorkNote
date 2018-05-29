@@ -4,6 +4,7 @@ pages:
   - C++: 
      - 模拟代码逻辑: C++/logiccode.md
      - 代码块: C++/blockcode.md
+     - 系统代码块: C++/syscode.md
   - vim:
      - 字符串搜索替换: Vim/replace.md
   - gdb:
