@@ -36,7 +36,7 @@
     
     
       
-        <title>代码逻辑 - 工作笔记</title>
+        <title>模拟代码逻辑 - 工作笔记</title>
       
     
     
@@ -119,7 +119,7 @@
                 工作笔记
               </span>
               <span class="md-header-nav__topic">
-                代码逻辑
+                模拟代码逻辑
               </span>
             
           
@@ -276,11 +276,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        代码逻辑
+        模拟代码逻辑
       </label>
     
-    <a href="./" title="代码逻辑" class="md-nav__link md-nav__link--active">
-      代码逻辑
+    <a href="./" title="模拟代码逻辑" class="md-nav__link md-nav__link--active">
+      模拟代码逻辑
     </a>
     
       
@@ -299,15 +299,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rand" title="rand最大值" class="md-nav__link">
-    rand最大值
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="静态断言" class="md-nav__link">
-    静态断言
+  <a href="#_2" title="激活一个形象" class="md-nav__link">
+    激活一个形象
   </a>
   
 </li>
@@ -320,6 +313,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../blockcode/" title="代码块" class="md-nav__link">
+      代码块
+    </a>
   </li>
 
         
@@ -472,6 +477,78 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      gm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        gm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../gm/" title="常用Gm命令" class="md-nav__link">
+      常用Gm命令
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      杂项
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        杂项
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../other/" title="其他" class="md-nav__link">
+      其他
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -498,15 +575,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rand" title="rand最大值" class="md-nav__link">
-    rand最大值
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="静态断言" class="md-nav__link">
-    静态断言
+  <a href="#_2" title="激活一个形象" class="md-nav__link">
+    激活一个形象
   </a>
   
 </li>
@@ -528,7 +598,7 @@
               
                 
                 
-                  <h1>代码逻辑</h1>
+                  <h1>模拟代码逻辑</h1>
                 
                 <h2 id="_1">抽奖大致流程</h2>
 <div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
@@ -577,44 +647,37 @@
 </pre></div>
 
 
-<h2 id="rand">rand最大值</h2>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">RandomNum</span><span class="p">(</span><span class="kt">int</span> <span class="n">min_num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">max_num</span><span class="p">)</span>
+<h2 id="_2">激活一个形象</h2>
+<p>使用位运算激活一个形象</p>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kr">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">min_num</span> <span class="o">&gt;</span> <span class="n">max_num</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">tmp_num</span> <span class="o">=</span> <span class="n">min_num</span><span class="p">;</span>
-        <span class="n">min_num</span> <span class="o">=</span> <span class="n">max_num</span><span class="p">;</span>
-        <span class="n">max_num</span> <span class="o">=</span> <span class="n">tmp_num</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="kr">unsigned</span> <span class="kr">int</span> <span class="n">special_image</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>     <span class="c1">// 最大保存32个形象</span>
 
-    <span class="kt">int</span> <span class="n">interval_num</span> <span class="o">=</span> <span class="n">max_num</span> <span class="o">-</span> <span class="n">min_num</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">interval_num</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="kr">int</span> <span class="n">active_image_id</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>           <span class="c1">// 想要激活的形象id</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">interval_num</span> <span class="o">&lt;</span> <span class="n">RAND_MAX</span><span class="p">)</span>
+    <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="k">return</span> <span class="n">min_num</span> <span class="o">+</span> <span class="p">(</span><span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="n">interval_num</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="k">else</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">rand_num</span> <span class="o">=</span> <span class="p">(</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">+</span> <span class="n">rand</span><span class="p">();</span> <span class="c1">// 两次随机数补成一个int（主要解决windows下rand最大值只有2^15的问题）</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">rand_num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">rand_num</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+            <span class="c1">// 如果已经激活</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">special_image</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">active_image_id</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="c1">// 提示已激活，返回</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;You had actived the image&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">special_image</span> <span class="o">|=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">active_image_id</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">special_image</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="n">min_num</span> <span class="o">+</span> <span class="kt">int</span><span class="p">(</span><span class="n">rand_num</span> <span class="o">%</span> <span class="n">interval_num</span><span class="p">);</span>
+
     <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
-
-
-<h2 id="_2">静态断言</h2>
-<p>利用负数组下标做静态断言</p>
-<div class="codehilite"><pre><span></span><span class="cp">#define UNSTD_STATIC_CHECK(Expr)                     UNSTD_STATIC_CHECK1(Expr, __LINE__)</span>
-<span class="cp">#define UNSTD_STATIC_CHECK1(Expr, Line)              UNSTD_STATIC_CHECK2(Expr, Line)</span>
-<span class="cp">#define UNSTD_STATIC_CHECK2(Expr, Line)              typedef char UnName##Line[(Expr) ? 1 : -1];</span>
 </pre></div>
                 
                   
@@ -651,13 +714,13 @@
           </a>
         
         
-          <a href="../../Vim/replace/" title="字符串搜索替换" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../blockcode/" title="代码块" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                字符串搜索替换
+                代码块
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -17,6 +17,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/C++/blockcode/</loc>
+     <lastmod>2018-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
@@ -53,6 +59,26 @@
         
     <url>
      <loc>/Linux/common_shell/</loc>
+     <lastmod>2018-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/gm/</loc>
+     <lastmod>2018-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/other/</loc>
      <lastmod>2018-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
