@@ -62,7 +62,7 @@
         },
         {
             "location": "/gdb/gdb/",
-            "text": "\u8c03\u8bd5core\n\n\ngbd\n \nprocess_name\n \ncore_file_name\n\n\ngdb\n \n-\nc\n \ncore_file_name\n \nprocess_name\n\n\n\n\n\n\n\u65ad\u70b9\n\n\nb \u65ad\u70b9\n\n\nc \u6267\u884c\n\n\np \u6253\u5370\n\n\nq \u53d6\u6d88\n\n\ngdb.txt:\n\n\nb\n \n\u51fd\u6570\u540d\n\n\nc\n\n\np\n \n\u53d8\u91cf\n\n\n(\n\u5176\u4ed6\u64cd\u4f5c\n)\n\n\nq\n\n\n\n\n\n\n\u67e5\u770b\u8fdb\u7a0bid\uff1a\n\n\nps\n \n-\naux\n \n|\n \ngrep\n \n`pwd`\n             \n#\n \n\u6ce8\u610f\u7b26\u53f7\n \n` \u4e0d\u662f\u5355\u5f15\u53f7 \u2019\n\n\n\n\n\n\ngdb\u65ad\u70b9\uff1a\n\n\ngdb\n \n-\np\n \n\u8fdb\u7a0bid\n \n-\nx\n \ngdb\n.\ntxt",
+            "text": "\u8c03\u8bd5core\n\n\ngbd\n \nprocess_name\n \ncore_file_name\n\n\ngdb\n \n-\nc\n \ncore_file_name\n \nprocess_name\n\n\n\n\n\n\n\u65ad\u70b9\n\n\n\n\n\n\n\n\nName\n\n\nDescriptions\n\n\n\n\n\n\n\n\n\n\nb\n\n\n\u65ad\u70b9\n\n\n\n\n\n\nc\n\n\n\u6267\u884c\n\n\n\n\n\n\np\n\n\n\u6253\u5370\n\n\n\n\n\n\nq\n\n\n\u53d6\u6d88\n\n\n\n\n\n\n\n\n\u4f7f\u7528gdb.txt\u65ad\u70b9\u6253\u5370\u540e\u9a6c\u4e0a\u9000\u51fagdb\u4e0d\u5f71\u54cd\u5916\u670d\u73a9\u5bb6\u64cd\u4f5c\u3002\ngdb.txt:\n\n\nb\n \n\u51fd\u6570\u540d\n\n\nc\n\n\np\n \n\u53d8\u91cf\n\n\n(\n\u5176\u4ed6\u64cd\u4f5c\n)\n\n\nq\n\n\n\n\n\n\n\u67e5\u770b\u8fdb\u7a0bid\uff1a\n\n\nps\n \n-\naux\n \n|\n \ngrep\n \n`pwd`\n             \n#\n \n\u6ce8\u610f\u7b26\u53f7\n \n` \u4e0d\u662f\u5355\u5f15\u53f7 \u2019\n\n\n\n\n\n\ngdb\u65ad\u70b9\uff1a\n\n\ngdb\n \n-\np\n \n\u8fdb\u7a0bid\n \n-\nx\n \ngdb\n.\ntxt",
             "title": "\u5e38\u7528\u547d\u4ee4"
         },
         {
@@ -72,7 +72,7 @@
         },
         {
             "location": "/gdb/gdb/#_1",
-            "text": "b \u65ad\u70b9  c \u6267\u884c  p \u6253\u5370  q \u53d6\u6d88  gdb.txt:  b   \u51fd\u6570\u540d  c  p   \u53d8\u91cf  ( \u5176\u4ed6\u64cd\u4f5c )  q   \u67e5\u770b\u8fdb\u7a0bid\uff1a  ps   - aux   |   grep   `pwd`               #   \u6ce8\u610f\u7b26\u53f7   ` \u4e0d\u662f\u5355\u5f15\u53f7 \u2019   gdb\u65ad\u70b9\uff1a  gdb   - p   \u8fdb\u7a0bid   - x   gdb . txt",
+            "text": "Name  Descriptions      b  \u65ad\u70b9    c  \u6267\u884c    p  \u6253\u5370    q  \u53d6\u6d88     \u4f7f\u7528gdb.txt\u65ad\u70b9\u6253\u5370\u540e\u9a6c\u4e0a\u9000\u51fagdb\u4e0d\u5f71\u54cd\u5916\u670d\u73a9\u5bb6\u64cd\u4f5c\u3002\ngdb.txt:  b   \u51fd\u6570\u540d  c  p   \u53d8\u91cf  ( \u5176\u4ed6\u64cd\u4f5c )  q   \u67e5\u770b\u8fdb\u7a0bid\uff1a  ps   - aux   |   grep   `pwd`               #   \u6ce8\u610f\u7b26\u53f7   ` \u4e0d\u662f\u5355\u5f15\u53f7 \u2019   gdb\u65ad\u70b9\uff1a  gdb   - p   \u8fdb\u7a0bid   - x   gdb . txt",
             "title": "\u65ad\u70b9"
         },
         {
