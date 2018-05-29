@@ -65,6 +65,7 @@ int main()
             {
                 // 提示已激活，返回
                 std::cout << "You had actived the image" << std::endl;
+                break;
             }
             else
             {
