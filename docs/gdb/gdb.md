@@ -5,14 +5,14 @@ gdb -c core_file_name process_name
 ```
 
 ## 断点
-b 断点
+| Name | Descriptions |
+| - | -: |
+| b | 断点 |
+| c | 执行 |
+| p | 打印 |
+| q | 取消 |
 
-c 执行
-
-p 打印
-
-q 取消
-
+使用gdb.txt断点打印后马上退出gdb不影响外服玩家操作。
 gdb.txt:
 ```javascript
 b 函数名
