@@ -2,7 +2,8 @@ site_name: 工作笔记
 pages:
   - 主页: index.md
   - C++: 
-     - 代码逻辑: C++/logiccode.md
+     - 模拟代码逻辑: C++/logiccode.md
+     - 代码块: C++/blockcode.md
   - vim:
      - 字符串搜索替换: Vim/replace.md
   - gdb:
@@ -11,6 +12,10 @@ pages:
      - Mysql: Sql/mysql.md
   - shell:
      - 常用Shell命令: Linux/common_shell.md
+  - gm:
+     - 常用Gm命令: gm.md
+  - 杂项:
+     - 其他: other.md
 
 theme:
   name: 'material'

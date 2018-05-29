@@ -45,43 +45,36 @@ int main()
 }
 ```
 
-## rand最大值
-```c++
-int RandomNum(int min_num, int max_num)
-{
-	if (min_num > max_num)
-	{
-		int tmp_num = min_num;
-		min_num = max_num;
-		max_num = tmp_num;
-	}
-
-	int interval_num = max_num - min_num;
-	if (interval_num <= 0)
-	{
-		return 0;
-	}
-
-	if (interval_num < RAND_MAX)
-	{
-		return min_num + (rand() % interval_num);
-	}
-	else
-	{
-		int rand_num = (rand() << 16) + rand(); // 两次随机数补成一个int（主要解决windows下rand最大值只有2^15的问题）
-		if (rand_num < 0)
-		{
-			rand_num *= -1;
-		}
-		return min_num + int(rand_num % interval_num);
-	}
-}
+## 激活一个形象
+使用位运算激活一个形象
 ```
+#include <iostream>
 
-## 静态断言
-利用负数组下标做静态断言
-```c++
-#define UNSTD_STATIC_CHECK(Expr)                     UNSTD_STATIC_CHECK1(Expr, __LINE__)
-#define UNSTD_STATIC_CHECK1(Expr, Line)              UNSTD_STATIC_CHECK2(Expr, Line)
-#define UNSTD_STATIC_CHECK2(Expr, Line)              typedef char UnName##Line[(Expr) ? 1 : -1];
+int main()
+{
+    unsigned int special_image = 0;     // 最大保存32个形象
+
+    int active_image_id = 10;           // 想要激活的形象id
+
+    for(int i = 0; i < 2; i++)
+    {
+        if (1)
+        {
+            // 如果已经激活
+            if (special_image & (1 << active_image_id))
+            {
+                // 提示已激活，返回
+                std::cout << "You had actived the image" << std::endl;
+            }
+            else
+            {
+                special_image |= (1 << active_image_id);
+            }
+            std::cout << special_image << std::endl;
+        }
+
+    }
+
+    return 0;
+}
 ```
