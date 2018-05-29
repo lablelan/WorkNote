@@ -56,6 +56,7 @@ int main()
 
     int active_image_id = 10;           // 想要激活的形象id
 
+	// 模拟激活两次同一形象
     for(int i = 0; i < 2; i++)
     {
         if (1)
