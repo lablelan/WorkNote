@@ -15,10 +15,16 @@ gdb -c core_file_name process_name
 使用gdb.txt断点打印后马上退出gdb不影响外服玩家操作。
 gdb.txt:
 ```javascript
-b 函数名
+b 文件名:行数
 c
 p 变量
 (其他操作)
+q
+
+# 例如
+b mastercollect.cpp:121
+c
+p m_role->GetCommonDataParam()->master_collect_flags
 q
 ```
 查看进程id：
