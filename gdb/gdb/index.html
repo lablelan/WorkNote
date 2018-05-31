@@ -659,10 +659,16 @@
 </table>
 <p>使用gdb.txt断点打印后马上退出gdb不影响外服玩家操作。
 gdb.txt:</p>
-<div class="codehilite"><pre><span></span><span class="nx">b</span> <span class="nx">函数名</span>
+<div class="codehilite"><pre><span></span><span class="nx">b</span> <span class="nx">文件名</span><span class="o">:</span><span class="nx">行数</span>
 <span class="nx">c</span>
 <span class="nx">p</span> <span class="nx">变量</span>
 <span class="p">(</span><span class="nx">其他操作</span><span class="p">)</span>
+<span class="nx">q</span>
+
+<span class="err">#</span> <span class="nx">例如</span>
+<span class="nx">b</span> <span class="nx">mastercollect</span><span class="p">.</span><span class="nx">cpp</span><span class="o">:</span><span class="mi">121</span>
+<span class="nx">c</span>
+<span class="nx">p</span> <span class="nx">m_role</span><span class="o">-&gt;</span><span class="nx">GetCommonDataParam</span><span class="p">()</span><span class="o">-&gt;</span><span class="nx">master_collect_flags</span>
 <span class="nx">q</span>
 </pre></div>
 
