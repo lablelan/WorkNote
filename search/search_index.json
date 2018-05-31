@@ -2,8 +2,13 @@
     "docs": [
         {
             "location": "/",
-            "text": "",
+            "text": "\u591a\u505a\u7b14\u8bb0\uff0c\u591a\u5077\u61d2\u3002",
             "title": "\u4e3b\u9875"
+        },
+        {
+            "location": "/#_1",
+            "text": "",
+            "title": "\u591a\u505a\u7b14\u8bb0\uff0c\u591a\u5077\u61d2\u3002"
         },
         {
             "location": "/C++/logiccode/",
@@ -49,6 +54,36 @@
             "location": "/C++/syscode/#_1",
             "text": "XxXdef.hpp  #ifndef __XxX_DEF_HPP__  #define __XxX_DEF_HPP__  #pragma pack(push, 4)  #include   \"servercommon/servercommon.h\"  struct   XxXParam  { \n     XxXParam ()   {   this -> Reset ();   } \n\n     void   Reset () \n     { \n\n     }  };  using   XxXParamHex   =   char [ sizeof ( XxXParam )   *   2   +   1 ];  static_assert ( sizeof ( XxXParamHex )   <   4096 ,   \"Incorrect size\" );  #pragma pack(pop)  #endif   // __XxX_DEF_HPP__   XxX.h  #ifndef __XxX_H__  #define __XxX_H__  #include   \"servercommon/xxxdef.hpp\"  #include   \"obj/character/attribute.hpp\"  class   Role ;  class   XxX  {  public : \n     void   SetRole ( Role   * role )   {   m_role   =   role ;   } \n     void   InitParam ( const   XxXParam   & param ); \n     void   GetInitParam ( XxXParam   * param )   {   * param   =   m_param ;   } \n     void   ReCalcAttr ( CharIntAttrs   & base_add ,   bool   is_recalc );  private : \n     Role   * m_role   =   nullptr ; \n\n     CharIntAttrs   m_attrs_add ; \n\n     XxXParam   m_param ;  };  #endif  // __XxX_H__   XxX.cpp",
             "title": "\u7cfb\u7edf\u4ee3\u7801"
+        },
+        {
+            "location": "/C++/configcode/",
+            "text": "\u8bfb\u53d6\u7269\u54c1\u5217\u8868\u914d\u7f6e\n\n\nexecle\u6dfb\u52a0\u4e00\u5217\n\n\n\n\n\n\n\n\ncs,itemlist\n\n\n\n\n\n\n\n\n\n\n\u5b57\u6bb5\u540d\u79f0\n\n\n\n\n\n\nitem_id:num:is_bind,item_id:num:is_bind\n\n\n\n\n\n\n\n\n\u8bfbitemlist\u63a5\u53e3\n\n\ninline\n \nbool\n \nReadItemListConfig\n(\nTiXmlElement\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nitem_str\n,\n \nstd\n::\nvector\n<\nItemConfigData\n>\n \n&\nitem_list\n)\n\n\n\n\n\n\n\u8bfb\u53d6\u57fa\u7840\u5c5e\u6027\u914d\u7f6e\n\n\nAttributesConfig\n\n\n// \u8bfb\u53d6\u914d\u7f6e\u5c5e\u6027\n\n\nbool\n \nReadConfig\n(\nTiXmlElement\n \n*\n \ndata_element\n)\n\n\nbool\n \nReadConfig\n(\nrapidxml\n::\nxml_node\n<>\n \n*\n \ndata_element\n)\n\n\n\n// \u5c06\u914d\u7f6e\u5c5e\u6027\u52a0\u5230\u4eba\u7269\u57fa\u7840\u5c5e\u6027\n\n\nvoid\n \nAddAttrs\n(\nCharIntAttrs\n \n&\nattrs\n,\n \ndouble\n \nfactor\n \n=\n \n1.0\n)\n \nconst\n;\n\n\n// \u5c06\u914d\u7f6e\u5c5e\u6027\u52a0\u5230\u4eba\u7269\u6218\u6597\u5c5e\u6027\n\n\nvoid\n \nAddFightAttrs\n(\nCharIntAttrs\n \n&\nattrs\n,\n \ndouble\n \nfactor\n \n=\n \n1.0\n)\n \nconst\n;\n\n\n\n\n\n\n\u8bfb\u53d6\u5750\u6807\u5217\u8868\u914d\u7f6e\n\n\nPointListConfig\n\u683c\u5f0f\uff1a50,50|50,65\n\n\n// \u8bfb\u53d6\u5750\u6807\n\n\nbool\n \nReadConfig\n(\nTiXmlElement\n \n*\n \ndata_element\n,\n \nconst\n \nchar\n \n*\nnode\n)\n\n\n// \u8fd4\u56de\u5750\u6807\u6570\u91cf\n\n\nint\n \nCount\n()\n\n\n\n\n\n\n\u968f\u673a\u9879\u76ee\u914d\u7f6e\n\n\n\n\n\n\n\n\nseq\n\n\nweight\n\n\n\n\n\n\n\n\n\n\n\u7d22\u5f15\n\n\n\u6743\u91cd\n\n\n\n\n\n\n1\n\n\n2222\n\n\n\n\n\n\n\n\nRandItemConfig\n\n\n// \u8bfb\u53d6\u6743\u91cd\u5217\u8868\uff0c\u51fd\u6570\u5185\u90e8\u4f1a\u8bfb\u53d6seq\n\n\nbool\n \nReadConfig\n(\nTiXmlElement\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nweight_str\n)\n\n\nbool\n \nReadConfig\n(\nRapidXmlNode\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nweight_str\n)\n\n\n\n// \u968f\u673a\u4e00\u4e2a\u9879\u76ee\uff0cRandItem\u4e2d\u7684seq\u5c31\u662f\u968f\u673a\u5230\u7684\u7d22\u5f15\n\n\nconst\n \nRandItem\n \n*\n \nRand\n()\n \nconst\n;\n\n\n\n\n\n\n\u5176\u4ed6\u8bfb\u53d6\u51fd\u6570\n\n\n// \u8bfbMonsterID\n\n\nextern\n \nbool\n \nReadMonsterID\n(\nTiXmlElement\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nUInt16\n \n&\nmonster_id\n);\n\n\nextern\n \nbool\n \nReadMonsterID\n(\nrapidxml\n::\nxml_node\n<>\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nUInt16\n \n&\nmonster_id\n);\n\n\n\n// \u8bfbTaskID\n\n\nextern\n \nbool\n \nReadTaskID\n(\nTiXmlElement\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nTaskID\n \n&\ntask_id\n);\n\n\nextern\n \nbool\n \nReadTaskID\n(\nRapidXmlNode\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nTaskID\n \n&\ntask_id\n);\n\n\n\n// \u8bfb\u6b63\u6574\u6570\n\n\ninline\n \nbool\n \nReadPositiveInt\n(\nTiXmlElement\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nint\n \n&\nvalue\n)\n\n\ninline\n \nbool\n \nReadPositiveInt\n(\nrapidxml\n::\nxml_node\n<>\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nint\n \n&\nvalue\n)\n\n\n\n// \u8bfb\u975e\u8d1f\u6d6e\u70b9\u6570\n\n\ninline\n \nbool\n \nReadNonNegativeDouble\n(\nTiXmlElement\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \ndouble\n \n&\nvalue\n)\n\n\ninline\n \nbool\n \nReadNonNegativeDouble\n(\nRapidXmlNode\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \ndouble\n \n&\nvalue\n)\n\n\n\n// \u8bfb\u6b63\u6d6e\u70b9\u6570\n\n\ninline\n \nbool\n \nReadPositiveDouble\n(\nTiXmlElement\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \ndouble\n \n&\nvalue\n)\n\n\n\n// \u8bfb\u975e\u8d1f\u6574\u6570\n\n\ninline\n \nbool\n \nReadNonNegativeInt\n(\nTiXmlElement\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nint\n \n&\nvalue\n)\n\n\n\n// \u8bfb\u975e\u8d1f\u6574\u6570\n\n\ninline\n \nbool\n \nReadNonNegativeInt\n(\nrapidxml\n::\nxml_node\n<>\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nint\n \n&\nvalue\n)\n\n\n\n// \u8bfbHHMM\n\n\ninline\n \nbool\n \nReadHHMM\n(\nTiXmlElement\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nshort\n \n&\nhhmm\n)\n\n\ninline\n \nbool\n \nReadHHMM\n(\nrapidxml\n::\nxml_node\n<>\n \n*\ndata_element\n,\n \nconst\n \nchar\n \n*\nname\n,\n \nshort\n \n&\nhhmm\n)",
+            "title": "\u914d\u7f6e\u8bfb\u53d6"
+        },
+        {
+            "location": "/C++/configcode/#_1",
+            "text": "execle\u6dfb\u52a0\u4e00\u5217     cs,itemlist      \u5b57\u6bb5\u540d\u79f0    item_id:num:is_bind,item_id:num:is_bind     \u8bfbitemlist\u63a5\u53e3  inline   bool   ReadItemListConfig ( TiXmlElement   * data_element ,   const   char   * item_str ,   std :: vector < ItemConfigData >   & item_list )",
+            "title": "\u8bfb\u53d6\u7269\u54c1\u5217\u8868\u914d\u7f6e"
+        },
+        {
+            "location": "/C++/configcode/#_2",
+            "text": "AttributesConfig  // \u8bfb\u53d6\u914d\u7f6e\u5c5e\u6027  bool   ReadConfig ( TiXmlElement   *   data_element )  bool   ReadConfig ( rapidxml :: xml_node <>   *   data_element )  // \u5c06\u914d\u7f6e\u5c5e\u6027\u52a0\u5230\u4eba\u7269\u57fa\u7840\u5c5e\u6027  void   AddAttrs ( CharIntAttrs   & attrs ,   double   factor   =   1.0 )   const ;  // \u5c06\u914d\u7f6e\u5c5e\u6027\u52a0\u5230\u4eba\u7269\u6218\u6597\u5c5e\u6027  void   AddFightAttrs ( CharIntAttrs   & attrs ,   double   factor   =   1.0 )   const ;",
+            "title": "\u8bfb\u53d6\u57fa\u7840\u5c5e\u6027\u914d\u7f6e"
+        },
+        {
+            "location": "/C++/configcode/#_3",
+            "text": "PointListConfig\n\u683c\u5f0f\uff1a50,50|50,65  // \u8bfb\u53d6\u5750\u6807  bool   ReadConfig ( TiXmlElement   *   data_element ,   const   char   * node )  // \u8fd4\u56de\u5750\u6807\u6570\u91cf  int   Count ()",
+            "title": "\u8bfb\u53d6\u5750\u6807\u5217\u8868\u914d\u7f6e"
+        },
+        {
+            "location": "/C++/configcode/#_4",
+            "text": "seq  weight      \u7d22\u5f15  \u6743\u91cd    1  2222     RandItemConfig  // \u8bfb\u53d6\u6743\u91cd\u5217\u8868\uff0c\u51fd\u6570\u5185\u90e8\u4f1a\u8bfb\u53d6seq  bool   ReadConfig ( TiXmlElement   * data_element ,   const   char   * weight_str )  bool   ReadConfig ( RapidXmlNode   * data_element ,   const   char   * weight_str )  // \u968f\u673a\u4e00\u4e2a\u9879\u76ee\uff0cRandItem\u4e2d\u7684seq\u5c31\u662f\u968f\u673a\u5230\u7684\u7d22\u5f15  const   RandItem   *   Rand ()   const ;",
+            "title": "\u968f\u673a\u9879\u76ee\u914d\u7f6e"
+        },
+        {
+            "location": "/C++/configcode/#_5",
+            "text": "// \u8bfbMonsterID  extern   bool   ReadMonsterID ( TiXmlElement   * data_element ,   const   char   * name ,   UInt16   & monster_id );  extern   bool   ReadMonsterID ( rapidxml :: xml_node <>   * data_element ,   const   char   * name ,   UInt16   & monster_id );  // \u8bfbTaskID  extern   bool   ReadTaskID ( TiXmlElement   * data_element ,   const   char   * name ,   TaskID   & task_id );  extern   bool   ReadTaskID ( RapidXmlNode   * data_element ,   const   char   * name ,   TaskID   & task_id );  // \u8bfb\u6b63\u6574\u6570  inline   bool   ReadPositiveInt ( TiXmlElement   * data_element ,   const   char   * name ,   int   & value )  inline   bool   ReadPositiveInt ( rapidxml :: xml_node <>   * data_element ,   const   char   * name ,   int   & value )  // \u8bfb\u975e\u8d1f\u6d6e\u70b9\u6570  inline   bool   ReadNonNegativeDouble ( TiXmlElement   * data_element ,   const   char   * name ,   double   & value )  inline   bool   ReadNonNegativeDouble ( RapidXmlNode   * data_element ,   const   char   * name ,   double   & value )  // \u8bfb\u6b63\u6d6e\u70b9\u6570  inline   bool   ReadPositiveDouble ( TiXmlElement   * data_element ,   const   char   * name ,   double   & value )  // \u8bfb\u975e\u8d1f\u6574\u6570  inline   bool   ReadNonNegativeInt ( TiXmlElement   * data_element ,   const   char   * name ,   int   & value )  // \u8bfb\u975e\u8d1f\u6574\u6570  inline   bool   ReadNonNegativeInt ( rapidxml :: xml_node <>   * data_element ,   const   char   * name ,   int   & value )  // \u8bfbHHMM  inline   bool   ReadHHMM ( TiXmlElement   * data_element ,   const   char   * name ,   short   & hhmm )  inline   bool   ReadHHMM ( rapidxml :: xml_node <>   * data_element ,   const   char   * name ,   short   & hhmm )",
+            "title": "\u5176\u4ed6\u8bfb\u53d6\u51fd\u6570"
         },
         {
             "location": "/Vim/replace/",
