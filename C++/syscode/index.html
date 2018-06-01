@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="#xxxdefhpp" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -316,8 +316,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="系统代码" class="md-nav__link">
-    系统代码
+  <a href="#xxxdefhpp" title="XxXdef.hpp" class="md-nav__link">
+    XxXdef.hpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xxxh" title="XxX.h" class="md-nav__link">
+    XxX.h
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xxxcpp" title="XxX.cpp" class="md-nav__link">
+    XxX.cpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xxxcofighpp" title="XxXcofig.hpp" class="md-nav__link">
+    XxXcofig.hpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xxxconfigcpp" title="XxXconfig.cpp" class="md-nav__link">
+    XxXconfig.cpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgxxxh" title="msgxxx.h" class="md-nav__link">
+    msgxxx.h
   </a>
   
 </li>
@@ -585,8 +620,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="系统代码" class="md-nav__link">
-    系统代码
+  <a href="#xxxdefhpp" title="XxXdef.hpp" class="md-nav__link">
+    XxXdef.hpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xxxh" title="XxX.h" class="md-nav__link">
+    XxX.h
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xxxcpp" title="XxX.cpp" class="md-nav__link">
+    XxX.cpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xxxcofighpp" title="XxXcofig.hpp" class="md-nav__link">
+    XxXcofig.hpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xxxconfigcpp" title="XxXconfig.cpp" class="md-nav__link">
+    XxXconfig.cpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msgxxxh" title="msgxxx.h" class="md-nav__link">
+    msgxxx.h
   </a>
   
 </li>
@@ -610,14 +680,15 @@
                 
                   <h1>系统代码块</h1>
                 
-                <h2 id="_1">系统代码</h2>
-<p>XxXdef.hpp</p>
-<div class="codehilite"><pre><span></span><span class="cp">#ifndef __XxX_DEF_HPP__</span>
-<span class="cp">#define __XxX_DEF_HPP__</span>
+                <h2 id="xxxdefhpp">XxXdef.hpp</h2>
+<div class="codehilite"><pre><span></span><span class="cp">#ifndef __XXX_DEF_HPP__</span>
+<span class="cp">#define __XXX_DEF_HPP__</span>
 
 <span class="cp">#pragma pack(push, 4)</span>
 
 <span class="cp">#include</span> <span class="cpf">&quot;servercommon/servercommon.h&quot;</span><span class="cp"></span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">INT_ARRAY_MAX</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
 <span class="k">struct</span> <span class="n">XxXParam</span>
 <span class="p">{</span>
@@ -625,8 +696,11 @@
 
     <span class="kt">void</span> <span class="n">Reset</span><span class="p">()</span>
     <span class="p">{</span>
-
+        <span class="n">memset</span><span class="p">(</span><span class="n">int_array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">int_array</span><span class="p">));</span>
     <span class="p">}</span>
+
+    <span class="c1">// 四字节对齐</span>
+    <span class="kt">int</span> <span class="n">int_array</span><span class="p">[</span><span class="n">INT_ARRAY_MAX</span><span class="p">];</span>
 <span class="p">};</span>
 
 <span class="k">using</span> <span class="n">XxXParamHex</span> <span class="o">=</span> <span class="kt">char</span><span class="p">[</span><span class="k">sizeof</span><span class="p">(</span><span class="n">XxXParam</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
@@ -634,13 +708,13 @@
 
 <span class="cp">#pragma pack(pop)</span>
 
-<span class="cp">#endif  </span><span class="c1">// __XxX_DEF_HPP__</span>
+<span class="cp">#endif  </span><span class="c1">// __XXX_DEF_HPP__</span>
 </pre></div>
 
 
-<p>XxX.h</p>
-<div class="codehilite"><pre><span></span><span class="cp">#ifndef __XxX_H__</span>
-<span class="cp">#define __XxX_H__</span>
+<h2 id="xxxh">XxX.h</h2>
+<div class="codehilite"><pre><span></span><span class="cp">#ifndef __XXX_H__</span>
+<span class="cp">#define __XXX_H__</span>
 
 <span class="cp">#include</span> <span class="cpf">&quot;servercommon/xxxdef.hpp&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;obj/character/attribute.hpp&quot;</span><span class="cp"></span>
@@ -663,11 +737,11 @@
     <span class="n">XxXParam</span> <span class="n">m_param</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="cp">#endif </span><span class="c1">// __XxX_H__</span>
+<span class="cp">#endif </span><span class="c1">// __XXX_H__</span>
 </pre></div>
 
 
-<p>XxX.cpp</p>
+<h2 id="xxxcpp">XxX.cpp</h2>
 <div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;stdafx.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&quot;gamecommon.h&quot;</span><span class="cp"></span>
@@ -704,6 +778,209 @@
 
     <span class="n">m_role</span><span class="o">-&gt;</span><span class="n">GetCapability</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddCap</span><span class="p">(</span><span class="n">CAPABILITY_TYPE_XXX</span><span class="p">,</span> <span class="n">m_other_capability</span><span class="p">);</span>
 <span class="p">}</span>
+</pre></div>
+
+
+<h2 id="xxxcofighpp">XxXcofig.hpp</h2>
+<div class="codehilite"><pre><span></span><span class="c1">// 系统配置</span>
+<span class="cp">#ifndef __XXX_CONFIG_HPP__</span>
+<span class="cp">#define __XXX_CONFIG_HPP__</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;config/gameconfigcommon/gameconfigcommon.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;servercommon/xxxdef.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// 其它</span>
+<span class="k">struct</span> <span class="n">XxXOtherConfig</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">times_cfg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// 模块配置</span>
+<span class="k">struct</span> <span class="n">ModuleConfig</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">CfgItem</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">seq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                        <span class="c1">// 索引</span>
+        <span class="n">ItemID</span> <span class="n">item_id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                 <span class="c1">// 激活道具</span>
+
+        <span class="n">AttributesConfig</span> <span class="n">attrs_cfg</span><span class="p">;</span>         <span class="c1">// 属性加成</span>
+    <span class="p">};</span>
+
+    <span class="kt">int</span> <span class="n">cfg_item_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">CfgItem</span> <span class="n">cfg_item_list</span><span class="p">[</span><span class="n">XXX_ITEM_MAX_COUNT</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">XxXConfig</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">XxXConfig</span><span class="p">();</span>
+
+    <span class="kt">bool</span> <span class="nf">Init</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">configname</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">*</span><span class="n">err</span><span class="p">);</span>         <span class="c1">// Called by LogicConfigManager::Init</span>
+
+    <span class="k">const</span> <span class="n">XxXOtherConfig</span> <span class="o">&amp;</span> <span class="n">GetOtherCfg</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_other_cfg</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">const</span> <span class="n">XxXModuleConfig</span><span class="o">::</span><span class="n">CfgItem</span> <span class="o">*</span> <span class="n">GetModuleCfg</span><span class="p">(</span><span class="kt">int</span> <span class="n">seq</span><span class="p">);</span>
+<span class="k">protected</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">InitOtherCfg</span><span class="p">(</span><span class="n">RapidXmlNode</span> <span class="o">*</span><span class="n">root_element</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="nf">InitModuleCfg</span><span class="p">(</span><span class="n">RapidXmlNode</span> <span class="o">*</span><span class="n">root_element</span><span class="p">);</span>
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">XxXOtherConfig</span> <span class="n">m_other_cfg</span><span class="p">;</span>
+    <span class="n">XxXModuleConfig</span> <span class="n">m_module_cfg</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+
+
+<h2 id="xxxconfigcpp">XxXconfig.cpp</h2>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;stdafx.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;xxxconfig.hpp&quot;</span><span class="cp"></span>
+
+<span class="kt">bool</span> <span class="n">XxXConfig</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">configname</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">*</span><span class="n">err</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">PRE_LOAD_CONFIG2</span><span class="p">;</span>
+
+    <span class="n">LOAD_CONFIG2</span><span class="p">(</span><span class="s">&quot;other&quot;</span><span class="p">,</span> <span class="n">InitOtherCfg</span><span class="p">);</span>
+    <span class="n">LOAD_CONFIG2</span><span class="p">(</span><span class="s">&quot;module&quot;</span><span class="p">,</span> <span class="n">InitModuleCfg</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="n">XxXConfig</span><span class="o">::</span><span class="n">IsValidModuleSeq</span><span class="p">(</span><span class="kt">int</span> <span class="n">seq</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">seq</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">seq</span> <span class="o">&lt;</span> <span class="n">m_active_cfg</span><span class="p">.</span><span class="n">cfg_item_count</span> <span class="o">&amp;&amp;</span> <span class="n">seq</span> <span class="o">&lt;</span> <span class="n">MODULE_ITEM_MAX_COUNT</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">const</span> <span class="n">XxXModuleConfig</span><span class="o">::</span><span class="n">CfgItem</span> <span class="o">*</span> <span class="n">XxXConfig</span><span class="o">::</span><span class="n">GetActiveCfg</span><span class="p">(</span><span class="kt">int</span> <span class="n">seq</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">IsValidModuleSeq</span><span class="p">(</span><span class="n">seq</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="o">&amp;</span><span class="n">m_module_cfg</span><span class="p">.</span><span class="n">cfg_item_list</span><span class="p">[</span><span class="n">seq</span><span class="p">];</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span> <span class="n">XxXConfig</span><span class="o">::</span><span class="n">InitOtherCfg</span><span class="p">(</span><span class="n">RapidXmlNode</span> <span class="o">*</span><span class="n">root_element</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">RapidXmlNode</span> <span class="o">*</span><span class="n">data_element</span> <span class="o">=</span> <span class="n">root_element</span><span class="o">-&gt;</span><span class="n">first_node</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">data_element</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">10000</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ReadPositiveInt</span><span class="p">(</span><span class="n">data_element</span><span class="p">,</span> <span class="s">&quot;times_cfg&quot;</span><span class="p">,</span> <span class="n">m_other_cfg</span><span class="p">.</span><span class="n">times_cfg</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">XxXConfig</span><span class="o">::</span><span class="n">InitActiveCfg</span><span class="p">(</span><span class="n">RapidXmlNode</span> <span class="o">*</span><span class="n">root_element</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">RapidXmlNode</span> <span class="o">*</span><span class="n">data_element</span> <span class="o">=</span> <span class="n">root_element</span><span class="o">-&gt;</span><span class="n">first_node</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">data_element</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">10000</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">m_active_cfg</span><span class="p">.</span><span class="n">cfg_item_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">data_element</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">m_active_cfg</span><span class="p">.</span><span class="n">cfg_item_count</span> <span class="o">&gt;=</span> <span class="n">MODULE_ITEM_MAX_COUNT</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1000</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">int</span> <span class="n">seq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">GetSubNodeValue</span><span class="p">(</span><span class="n">data_element</span><span class="p">,</span> <span class="s">&quot;seq&quot;</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span> <span class="o">||</span> <span class="n">seq</span> <span class="o">!=</span> <span class="n">m_active_cfg</span><span class="p">.</span><span class="n">cfg_item_count</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">BeautyActiveConfig</span><span class="o">::</span><span class="n">CfgItem</span> <span class="o">&amp;</span><span class="n">cfg_item</span> <span class="o">=</span> <span class="n">m_active_cfg</span><span class="p">.</span><span class="n">cfg_item_list</span><span class="p">[</span><span class="n">m_active_cfg</span><span class="p">.</span><span class="n">cfg_item_count</span><span class="p">];</span>
+        <span class="n">cfg_item</span><span class="p">.</span><span class="n">seq</span> <span class="o">=</span> <span class="n">seq</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">GetSubNodeValue</span><span class="p">(</span><span class="n">data_element</span><span class="p">,</span> <span class="s">&quot;active_item_id&quot;</span><span class="p">,</span> <span class="n">cfg_item</span><span class="p">.</span><span class="n">active_item_id</span><span class="p">)</span> <span class="o">||</span> <span class="nb">NULL</span> <span class="o">==</span> <span class="n">ITEMPOOL</span><span class="o">-&gt;</span><span class="n">GetItem</span><span class="p">(</span><span class="n">cfg_item</span><span class="p">.</span><span class="n">active_item_id</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">cfg_item</span><span class="p">.</span><span class="n">attrs_cfg</span><span class="p">.</span><span class="n">ReadConfig</span><span class="p">(</span><span class="n">data_element</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">100</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="o">++</span><span class="n">m_active_cfg</span><span class="p">.</span><span class="n">cfg_item_count</span><span class="p">;</span>
+        <span class="n">data_element</span> <span class="o">=</span> <span class="n">data_element</span><span class="o">-&gt;</span><span class="n">next_sibling</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="msgxxxh">msgxxx.h</h2>
+<div class="codehilite"><pre><span></span><span class="c1">// XX协议</span>
+<span class="cp">#ifndef __MSG_XXX_H__</span>
+<span class="cp">#define __MSG_XXX_H__</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;servercommon/userprotocal/msgheader.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;config/gameconfigcommon/gameconfigcommon.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;servercommon/xxxdef.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;msgrole.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#pragma pack(push) </span>
+<span class="cp">#pragma pack(4)</span>
+
+<span class="k">namespace</span> <span class="n">Protocol</span>
+<span class="p">{</span>
+    <span class="c1">//-------------------------------------------------------------------------------------------</span>
+    <span class="c1">// CS Protocols</span>
+
+    <span class="c1">// 通用请求类型</span>
+    <span class="k">enum</span> <span class="n">XXX_COMMON_REQ_TYPE</span>
+    <span class="p">{</span>
+        <span class="n">XXX_COMMON_REQ_TYPE_BASE_INFO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>                  <span class="c1">// 基础信息请求</span>
+    <span class="p">};</span>
+
+    <span class="c1">// 通用请求 协议号</span>
+    <span class="k">class</span> <span class="nc">CSXxXCommonReq</span>
+    <span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">CSXxXCommonReq</span><span class="p">();</span>
+        <span class="n">MessageHeader</span> <span class="n">header</span><span class="p">;</span>
+
+        <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">req_type</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">param_1</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">param_2</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">param_3</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="c1">//-------------------------------------------------------------------------------------------</span>
+
+    <span class="c1">// SC Protocols</span>
+    <span class="c1">// 基础信息 协议号</span>
+    <span class="k">class</span> <span class="nc">SCXxXBaseInfo</span>
+    <span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">SCXxXBaseInfo</span><span class="p">();</span>
+        <span class="n">MessageHeader</span> <span class="n">header</span><span class="p">;</span>
+
+        <span class="kt">char</span> <span class="n">reserve_ch1</span><span class="p">;</span>                   
+        <span class="kt">char</span> <span class="n">reserve_ch2</span><span class="p">;</span>                   
+        <span class="kt">char</span> <span class="n">reserve_ch3</span><span class="p">;</span>                   
+        <span class="kt">char</span> <span class="n">reserve_ch4</span><span class="p">;</span>
+    <span class="p">};</span>
+
+
+    <span class="c1">//-------------------------------------------------------------------------------------------</span>
+<span class="p">}</span>
+
+<span class="cp">#pragma pack(pop)</span>
+
+<span class="cp">#endif</span>
 </pre></div>
                 
                   
