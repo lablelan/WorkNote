@@ -56,3 +56,41 @@ private:
 ```
 
 XxX.cpp
+```c++
+#include "stdafx.h"
+
+#include "gamecommon.h"
+#include "xxx.h"
+#include "protocal/msgxxx.h"
+#include "xxxconfig.hpp"
+
+void XxX::InitParam(const XxXParam &param)
+{
+	m_param = param;
+
+	m_module.Init(m_role, this);
+}
+
+void XxX::ReCalcAttr(CharIntAttrs &base_add, bool is_recalc)
+{
+	if (!is_recalc)
+	{
+		base_add.Add(m_attrs_add.m_attrs);
+
+		m_role->GetCapability()->AddCap(CAPABILITY_TYPE_XXX, m_other_capability);
+
+		return;
+	}
+
+	m_attrs_add.Reset();
+	m_other_capability = 0;
+
+	// m_attrs_add加属性
+	auto module_cfg = LOGIC_CONFIG->GetXxXCfg().GetModuleCfg();
+	module_cfg.AddAttrs(m_attrs_add);
+
+	base_add.Add(m_attrs_add.m_attrs);
+
+	m_role->GetCapability()->AddCap(CAPABILITY_TYPE_XXX, m_other_capability);
+}
+```
