@@ -668,6 +668,43 @@
 
 
 <p>XxX.cpp</p>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;stdafx.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;gamecommon.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xxx.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;protocal/msgxxx.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;xxxconfig.hpp&quot;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="n">XxX</span><span class="o">::</span><span class="n">InitParam</span><span class="p">(</span><span class="k">const</span> <span class="n">XxXParam</span> <span class="o">&amp;</span><span class="n">param</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">m_param</span> <span class="o">=</span> <span class="n">param</span><span class="p">;</span>
+
+    <span class="n">m_module</span><span class="p">.</span><span class="n">Init</span><span class="p">(</span><span class="n">m_role</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">XxX</span><span class="o">::</span><span class="n">ReCalcAttr</span><span class="p">(</span><span class="n">CharIntAttrs</span> <span class="o">&amp;</span><span class="n">base_add</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">is_recalc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">is_recalc</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">base_add</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">m_attrs_add</span><span class="p">.</span><span class="n">m_attrs</span><span class="p">);</span>
+
+        <span class="n">m_role</span><span class="o">-&gt;</span><span class="n">GetCapability</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddCap</span><span class="p">(</span><span class="n">CAPABILITY_TYPE_XXX</span><span class="p">,</span> <span class="n">m_other_capability</span><span class="p">);</span>
+
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">m_attrs_add</span><span class="p">.</span><span class="n">Reset</span><span class="p">();</span>
+    <span class="n">m_other_capability</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="c1">// m_attrs_add加属性</span>
+    <span class="k">auto</span> <span class="n">module_cfg</span> <span class="o">=</span> <span class="n">LOGIC_CONFIG</span><span class="o">-&gt;</span><span class="n">GetXxXCfg</span><span class="p">().</span><span class="n">GetModuleCfg</span><span class="p">();</span>
+    <span class="n">module_cfg</span><span class="p">.</span><span class="n">AddAttrs</span><span class="p">(</span><span class="n">m_attrs_add</span><span class="p">);</span>
+
+    <span class="n">base_add</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">m_attrs_add</span><span class="p">.</span><span class="n">m_attrs</span><span class="p">);</span>
+
+    <span class="n">m_role</span><span class="o">-&gt;</span><span class="n">GetCapability</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddCap</span><span class="p">(</span><span class="n">CAPABILITY_TYPE_XXX</span><span class="p">,</span> <span class="n">m_other_capability</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 
