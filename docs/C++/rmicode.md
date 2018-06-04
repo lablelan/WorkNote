@@ -7,7 +7,7 @@ dataaccess递gameworld一个数据包(response)：搞定了，取出结果我放
 
 gameworld拆开返回的数据包，看到了dataaccess标记着取出成功，就拿着数据走人了。
 
-## 对应代码
+## 调用流程
 ug04_cn的国家(Camp)初始化
 gameworld
 ```
