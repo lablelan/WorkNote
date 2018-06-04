@@ -36,7 +36,7 @@
     
     
       
-        <title>常用Shell命令 - 工作笔记</title>
+        <title>RMI远程方法调用 - 工作笔记</title>
       
     
     
@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="#gameworlddataaccess" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -119,7 +119,7 @@
                 工作笔记
               </span>
               <span class="md-header-nav__topic">
-                常用Shell命令
+                RMI远程方法调用
               </span>
             
           
@@ -246,10 +246,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       C++
@@ -267,7 +269,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../C%2B%2B/logiccode/" title="模拟代码逻辑" class="md-nav__link">
+    <a href="../logiccode/" title="模拟代码逻辑" class="md-nav__link">
       模拟代码逻辑
     </a>
   </li>
@@ -279,7 +281,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../C%2B%2B/blockcode/" title="代码块" class="md-nav__link">
+    <a href="../blockcode/" title="代码块" class="md-nav__link">
       代码块
     </a>
   </li>
@@ -291,7 +293,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../C%2B%2B/syscode/" title="系统代码块" class="md-nav__link">
+    <a href="../syscode/" title="系统代码块" class="md-nav__link">
       系统代码块
     </a>
   </li>
@@ -303,7 +305,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../C%2B%2B/configcode/" title="配置读取" class="md-nav__link">
+    <a href="../configcode/" title="配置读取" class="md-nav__link">
       配置读取
     </a>
   </li>
@@ -313,11 +315,52 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../C%2B%2B/rmicode/" title="RMI远程方法调用" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        RMI远程方法调用
+      </label>
+    
+    <a href="./" title="RMI远程方法调用" class="md-nav__link md-nav__link--active">
       RMI远程方法调用
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gameworlddataaccess" title="gameworld与dataaccess的会话" class="md-nav__link">
+    gameworld与dataaccess的会话
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="对应代码" class="md-nav__link">
+    对应代码
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -438,12 +481,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       shell
@@ -459,45 +500,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        常用Shell命令
-      </label>
-    
-    <a href="./" title="常用Shell命令" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../Linux/common_shell/" title="常用Shell命令" class="md-nav__link">
       常用Shell命令
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" title="杀死僵尸进程" class="md-nav__link">
-    杀死僵尸进程
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -597,8 +604,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="杀死僵尸进程" class="md-nav__link">
-    杀死僵尸进程
+  <a href="#gameworlddataaccess" title="gameworld与dataaccess的会话" class="md-nav__link">
+    gameworld与dataaccess的会话
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="对应代码" class="md-nav__link">
+    对应代码
   </a>
   
 </li>
@@ -620,16 +634,34 @@
               
                 
                 
-                  <h1>常用Shell命令</h1>
+                  <h1>RMI远程方法调用</h1>
                 
-                <h2 id="_1">杀死僵尸进程</h2>
-<p>查看进程占用端口：</p>
-<div class="codehilite"><pre><span></span><span class="nx">ps</span> <span class="o">-</span><span class="nx">aux</span> <span class="o">|</span> <span class="nx">grep</span> <span class="nx">pname</span><span class="p">(</span><span class="nx">进程名</span><span class="p">)</span>
+                <h2 id="gameworlddataaccess">gameworld与dataaccess的会话</h2>
+<p>gameworld对dataaccess说(session)：dataaccess，帮我从X表取出XX数据(远程方法),我在这等你(阻塞)。</p>
+<p>dataacess马上从X表将XX数据取出，并在数据包(TLV)里放了一个成功标记，然后将数据打包到数据包里。</p>
+<p>dataaccess递gameworld一个数据包(response)：搞定了，取出结果我放在数据包(TLV)里，你可以看一下。</p>
+<p>gameworld拆开返回的数据包，看到了dataaccess标记着取出成功，就拿着数据走人了。</p>
+<h2 id="_1">对应代码</h2>
+<p>ug04_cn的国家(Camp)初始化
+gameworld</p>
+<div class="codehilite"><pre><span></span><span class="mf">1.</span><span class="n">gameworld进程启动</span>
+<span class="mf">2.</span><span class="err">执行</span><span class="n">CampManager</span><span class="o">::</span><span class="n">OnServerStart</span><span class="p">()</span>
+<span class="mf">3.</span><span class="n">OnServerStart</span><span class="p">()</span><span class="err">调用</span><span class="n">CampManager</span><span class="o">::</span><span class="n">Load</span><span class="p">()</span>
+<span class="mf">4.</span><span class="n">Load</span><span class="p">()</span><span class="err">内创建</span><span class="n">RMIInitCampBackObjectImpl实例和RMIGlobalClient实例</span>
+<span class="mf">5.</span><span class="n">RMIGlobalClient实例绑定会话</span><span class="err">、远程调用方法和设置是否阻塞等</span>
+<span class="mf">6.</span><span class="n">RMIGlobalClient实例调用成员方法InitCampAsyn</span>
+<span class="mf">6.</span><span class="err">成员方法</span><span class="n">InitCampAsyn中m_session执行Call方法发送会话</span>
+<span class="mf">7.</span><span class="err">等待接收</span><span class="n">dataaccess响应</span>
+<span class="mf">8.</span><span class="err">拆开响应的</span><span class="n">TLV包</span><span class="err">，查看结果，成功获取数据执行</span><span class="n">CampManager</span><span class="o">::</span><span class="n">Instance</span><span class="p">().</span><span class="n">LoadRet</span><span class="p">()</span><span class="err">对国家对象进行初始化</span>
 </pre></div>
 
 
-<p>杀死进程：</p>
-<div class="codehilite"><pre><span></span><span class="nx">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="nx">pid</span><span class="p">(</span><span class="nx">进程id</span><span class="p">)</span>
+<p>dataaccess</p>
+<div class="codehilite"><pre><span></span><span class="mf">1.</span><span class="n">dataaccess进程接收到请求</span>
+<span class="mf">2.</span><span class="err">找到并执行对应的方法</span><span class="n">RMIGlobalObject</span><span class="o">::</span><span class="n">__InitCamp</span>
+<span class="mf">3.</span><span class="err">创建一个临时</span><span class="n">CampParam对象并以引用方式传入InitCamp函数去数据库获取数据</span><span class="err">，返回获取数据结果</span>
+<span class="mf">4.</span><span class="err">将返回结果结果压入</span><span class="n">TLVSerializer</span> <span class="o">*</span><span class="n">out_param中</span><span class="err">，并判断返回结果是否正常，如果正常将临时</span><span class="n">CamParam对象序列化</span><span class="p">(</span><span class="n">TLV</span><span class="p">)</span><span class="err">进</span><span class="n">out_param</span>
+<span class="mf">5.</span><span class="err">序列化完成后给</span><span class="n">gameworld发回一个响应</span><span class="err">，相应内容是序列化的结果</span>
 </pre></div>
                 
                   
@@ -651,7 +683,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../Sql/mysql/" title="Mysql" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../configcode/" title="配置读取" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -660,19 +692,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                Mysql
+                配置读取
               </span>
             </div>
           </a>
         
         
-          <a href="../../gm/" title="常用Gm命令" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../Vim/replace/" title="字符串搜索替换" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                常用Gm命令
+                字符串搜索替换
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
