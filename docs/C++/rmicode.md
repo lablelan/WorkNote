@@ -1,5 +1,5 @@
 ## gameworld与dataaccess的会话
-gameworld对dataaccess说(session)：dataaccess，帮我从X表取出XX数据(远程方法),我在这等你(阻塞)。
+gameworld对dataaccess说(session)：dataaccess，麻烦帮我从X表取出XX数据(远程方法),我在这等你(阻塞)。
 
 dataacess马上从X表将XX数据取出，并在数据包(TLV)里放了一个成功标记，然后将数据打包到数据包里。
 
@@ -10,7 +10,7 @@ gameworld拆开返回的数据包，看到了dataaccess标记着取出成功，�
 ## 对应代码
 ug04_cn的国家(Camp)初始化
 gameworld
-```c++
+```
 1.gameworld进程启动
 2.执行CampManager::OnServerStart()
 3.OnServerStart()调用CampManager::Load()
@@ -22,7 +22,7 @@ gameworld
 8.拆开响应的TLV包，查看结果，成功获取数据执行CampManager::Instance().LoadRet()对国家对象进行初始化
 ```
 dataaccess
-```c++
+```
 1.dataaccess进程接收到请求
 2.找到并执行对应的方法RMIGlobalObject::__InitCamp
 3.创建一个临时CampParam对象并以引用方式传入InitCamp函数去数据库获取数据，返回获取数据结果
