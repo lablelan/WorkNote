@@ -347,8 +347,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="对应代码" class="md-nav__link">
-    对应代码
+  <a href="#_1" title="调用流程" class="md-nav__link">
+    调用流程
   </a>
   
 </li>
@@ -611,8 +611,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="对应代码" class="md-nav__link">
-    对应代码
+  <a href="#_1" title="调用流程" class="md-nav__link">
+    调用流程
   </a>
   
 </li>
@@ -637,31 +637,31 @@
                   <h1>RMI远程方法调用</h1>
                 
                 <h2 id="gameworlddataaccess">gameworld与dataaccess的会话</h2>
-<p>gameworld对dataaccess说(session)：dataaccess，帮我从X表取出XX数据(远程方法),我在这等你(阻塞)。</p>
+<p>gameworld对dataaccess说(session)：dataaccess，麻烦帮我从X表取出XX数据(远程方法),我在这等你(阻塞)。</p>
 <p>dataacess马上从X表将XX数据取出，并在数据包(TLV)里放了一个成功标记，然后将数据打包到数据包里。</p>
 <p>dataaccess递gameworld一个数据包(response)：搞定了，取出结果我放在数据包(TLV)里，你可以看一下。</p>
 <p>gameworld拆开返回的数据包，看到了dataaccess标记着取出成功，就拿着数据走人了。</p>
-<h2 id="_1">对应代码</h2>
+<h2 id="_1">调用流程</h2>
 <p>ug04_cn的国家(Camp)初始化
 gameworld</p>
-<div class="codehilite"><pre><span></span><span class="mf">1.</span><span class="n">gameworld进程启动</span>
-<span class="mf">2.</span><span class="err">执行</span><span class="n">CampManager</span><span class="o">::</span><span class="n">OnServerStart</span><span class="p">()</span>
-<span class="mf">3.</span><span class="n">OnServerStart</span><span class="p">()</span><span class="err">调用</span><span class="n">CampManager</span><span class="o">::</span><span class="n">Load</span><span class="p">()</span>
-<span class="mf">4.</span><span class="n">Load</span><span class="p">()</span><span class="err">内创建</span><span class="n">RMIInitCampBackObjectImpl实例和RMIGlobalClient实例</span>
-<span class="mf">5.</span><span class="n">RMIGlobalClient实例绑定会话</span><span class="err">、远程调用方法和设置是否阻塞等</span>
-<span class="mf">6.</span><span class="n">RMIGlobalClient实例调用成员方法InitCampAsyn</span>
-<span class="mf">6.</span><span class="err">成员方法</span><span class="n">InitCampAsyn中m_session执行Call方法发送会话</span>
-<span class="mf">7.</span><span class="err">等待接收</span><span class="n">dataaccess响应</span>
-<span class="mf">8.</span><span class="err">拆开响应的</span><span class="n">TLV包</span><span class="err">，查看结果，成功获取数据执行</span><span class="n">CampManager</span><span class="o">::</span><span class="n">Instance</span><span class="p">().</span><span class="n">LoadRet</span><span class="p">()</span><span class="err">对国家对象进行初始化</span>
+<div class="codehilite"><pre><span></span>1.gameworld进程启动
+2.执行CampManager::OnServerStart()
+3.OnServerStart()调用CampManager::Load()
+4.Load()内创建RMIInitCampBackObjectImpl实例和RMIGlobalClient实例
+5.RMIGlobalClient实例绑定会话、远程调用方法和设置是否阻塞等
+6.RMIGlobalClient实例调用成员方法InitCampAsyn
+6.成员方法InitCampAsyn中m_session执行Call方法发送会话
+7.等待接收dataaccess响应
+8.拆开响应的TLV包，查看结果，成功获取数据执行CampManager::Instance().LoadRet()对国家对象进行初始化
 </pre></div>
 
 
 <p>dataaccess</p>
-<div class="codehilite"><pre><span></span><span class="mf">1.</span><span class="n">dataaccess进程接收到请求</span>
-<span class="mf">2.</span><span class="err">找到并执行对应的方法</span><span class="n">RMIGlobalObject</span><span class="o">::</span><span class="n">__InitCamp</span>
-<span class="mf">3.</span><span class="err">创建一个临时</span><span class="n">CampParam对象并以引用方式传入InitCamp函数去数据库获取数据</span><span class="err">，返回获取数据结果</span>
-<span class="mf">4.</span><span class="err">将返回结果结果压入</span><span class="n">TLVSerializer</span> <span class="o">*</span><span class="n">out_param中</span><span class="err">，并判断返回结果是否正常，如果正常将临时</span><span class="n">CamParam对象序列化</span><span class="p">(</span><span class="n">TLV</span><span class="p">)</span><span class="err">进</span><span class="n">out_param</span>
-<span class="mf">5.</span><span class="err">序列化完成后给</span><span class="n">gameworld发回一个响应</span><span class="err">，相应内容是序列化的结果</span>
+<div class="codehilite"><pre><span></span>1.dataaccess进程接收到请求
+2.找到并执行对应的方法RMIGlobalObject::__InitCamp
+3.创建一个临时CampParam对象并以引用方式传入InitCamp函数去数据库获取数据，返回获取数据结果
+4.将返回结果结果压入TLVSerializer *out_param中，并判断返回结果是否正常，如果正常将临时CamParam对象序列化(TLV)进out_param
+5.序列化完成后给gameworld发回一个响应，相应内容是序列化的结果
 </pre></div>
                 
                   
