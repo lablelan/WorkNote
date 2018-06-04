@@ -6,6 +6,7 @@ pages:
      - 代码块: C++/blockcode.md
      - 系统代码块: C++/syscode.md
      - 配置读取: C++/configcode.md
+     - RMI远程方法调用: C++/rmicode.md
   - vim:
      - 字符串搜索替换: Vim/replace.md
   - gdb:
