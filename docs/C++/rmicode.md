@@ -1,11 +1,11 @@
 ## gameworld与dataaccess的会话
-gameworld对dataaccess说(session)：dataaccess，麻烦帮我从X表取出XX数据(远程方法),我在这等你(阻塞)。
+gameworld对dataaccess说(session)：dataaccess，我需要一份数据去执行任务，麻烦帮我从X表取出XX数据(远程方法)。
 
 dataacess马上从X表将XX数据取出，并在数据包(TLV)里放了一个成功标记，然后将数据打包到数据包里。
 
 dataaccess递gameworld一个数据包(response)：搞定了，取出结果我放在数据包(TLV)里，你可以看一下。
 
-gameworld拆开返回的数据包，看到了dataaccess标记着取出成功，就拿着数据走人了。
+gameworld拆开返回的数据包，看到了dataaccess递来的数据包标记着取出成功，就拿着数据走人了。
 
 ## 调用流程
 ug04_cn的国家(Camp)初始化
