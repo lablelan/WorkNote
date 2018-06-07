@@ -4,6 +4,7 @@ pages:
   - C++: 
      - 模拟代码逻辑: C++/logiccode.md
      - 代码块: C++/blockcode.md
+     - 常用代码: C++/commoncode.md
      - 系统代码块: C++/syscode.md
      - 配置读取: C++/configcode.md
      - RMI远程方法调用: C++/rmicode.md
