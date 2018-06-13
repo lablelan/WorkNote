@@ -156,6 +156,31 @@
             "title": "\u66ff\u6362"
         },
         {
+            "location": "/Vim/editfiles/",
+            "text": "\u6253\u5f00\u591a\u4e2a\u6587\u4ef6\n\n\n\u547d\u7ec8\u7aef\u6a21\u5f0f\u4e0b\n\n\nvim\n \nfilename1\n \nfilename2\n\n\n\n\n\n\n\u547d\u4ee4\u884c\u6a21\u5f0f\u4e0b\n\n\n:\nopen\n \nfilename\n\n\n\n\n\n\n\u6253\u5f00\u6587\u4ef6\u95f4\u5207\u6362\n\n\n\u5feb\u6377\u952e\n\n\n#\n \n\u4e0b\u4e00\u4e2a\u6587\u4ef6\n\n\nCtrl\n \n+\n \n6\n\n\n\n\n\n\n\u547d\u4ee4\u884c\n\n\n#\n \n\u4e0b\u4e00\u4e2a\u6587\u4ef6\n\n\n:\nbn\n\n\n#\n \n\u4e0a\u4e00\u4e2a\u6587\u4ef6\n\n\n:\nbp\n\n\n\n\n\n\n\u5206\u7a97\u683c\u663e\u793a\u591a\u4e2a\u6587\u4ef6\n\n\n#\n \n\u7eb5\u5411\u5206\u5c4f\u663e\u793a\n\n\n:\nsplit\n\n\n#\n \n\u6a2a\u5411\u5206\u5c4f\u663e\u793a\n\n\n:\nvsplit\n\n\n\n\n\n\n\u591a\u7a97\u683c\u95f4\u5207\u6362\n\n\n\u5feb\u6377\u952e\n\n\n#\n \n\u987a\u5e8f\u5207\u6362\u4e0b\u4e00\u4e2a\u7a97\u683c\n\n\nCtrl\n \n+\n \nww\n\n\n#\n \n\u6390\u6362\u5230\u524d\n/\n\u4e0b\n/\n\u4e0a\n/\n\u540e\u4e00\u4e2a\u7a97\u683c\n\n\nCtrl\n \n+\n \nh\n/\nj\n/\nk\n/\nl",
+            "title": "\u5206\u5c4f\u7f16\u8f91\u6587\u4ef6"
+        },
+        {
+            "location": "/Vim/editfiles/#_1",
+            "text": "\u547d\u7ec8\u7aef\u6a21\u5f0f\u4e0b  vim   filename1   filename2   \u547d\u4ee4\u884c\u6a21\u5f0f\u4e0b  : open   filename",
+            "title": "\u6253\u5f00\u591a\u4e2a\u6587\u4ef6"
+        },
+        {
+            "location": "/Vim/editfiles/#_2",
+            "text": "\u5feb\u6377\u952e  #   \u4e0b\u4e00\u4e2a\u6587\u4ef6  Ctrl   +   6   \u547d\u4ee4\u884c  #   \u4e0b\u4e00\u4e2a\u6587\u4ef6  : bn  #   \u4e0a\u4e00\u4e2a\u6587\u4ef6  : bp",
+            "title": "\u6253\u5f00\u6587\u4ef6\u95f4\u5207\u6362"
+        },
+        {
+            "location": "/Vim/editfiles/#_3",
+            "text": "#   \u7eb5\u5411\u5206\u5c4f\u663e\u793a  : split  #   \u6a2a\u5411\u5206\u5c4f\u663e\u793a  : vsplit",
+            "title": "\u5206\u7a97\u683c\u663e\u793a\u591a\u4e2a\u6587\u4ef6"
+        },
+        {
+            "location": "/Vim/editfiles/#_4",
+            "text": "\u5feb\u6377\u952e  #   \u987a\u5e8f\u5207\u6362\u4e0b\u4e00\u4e2a\u7a97\u683c  Ctrl   +   ww  #   \u6390\u6362\u5230\u524d / \u4e0b / \u4e0a / \u540e\u4e00\u4e2a\u7a97\u683c  Ctrl   +   h / j / k / l",
+            "title": "\u591a\u7a97\u683c\u95f4\u5207\u6362"
+        },
+        {
             "location": "/gdb/gdb/",
             "text": "\u8c03\u8bd5core\n\n\ngbd\n \nprocess_name\n \ncore_file_name\n\n\ngdb\n \n-\nc\n \ncore_file_name\n \nprocess_name\n\n\n\n\n\n\n\u65ad\u70b9\n\n\n\n\n\n\n\n\nName\n\n\nDescriptions\n\n\n\n\n\n\n\n\n\n\nb\n\n\n\u65ad\u70b9\n\n\n\n\n\n\nc\n\n\n\u6267\u884c\n\n\n\n\n\n\np\n\n\n\u6253\u5370\n\n\n\n\n\n\nq\n\n\n\u53d6\u6d88\n\n\n\n\n\n\n\n\n\u4f7f\u7528gdb.txt\u65ad\u70b9\u6253\u5370\u540e\u9a6c\u4e0a\u9000\u51fagdb\u4e0d\u5f71\u54cd\u5916\u670d\u73a9\u5bb6\u64cd\u4f5c\u3002\ngdb.txt:\n\n\nb\n \n\u6587\u4ef6\u540d\n:\n\u884c\u6570\n\n\nc\n\n\np\n \n\u53d8\u91cf\n\n\n(\n\u5176\u4ed6\u64cd\u4f5c\n)\n\n\nq\n\n\n\n#\n \n\u4f8b\u5982\n\n\nb\n \nmastercollect\n.\ncpp\n:\n121\n\n\nc\n\n\np\n \nm_role\n->\nGetCommonDataParam\n()\n->\nmaster_collect_flags\n\n\nq\n\n\n\n\n\n\n\u67e5\u770b\u8fdb\u7a0bid\uff1a\n\n\nps\n \n-\naux\n \n|\n \ngrep\n \n`pwd`\n             \n#\n \n\u6ce8\u610f\u7b26\u53f7\n \n` \u4e0d\u662f\u5355\u5f15\u53f7 \u2019\n\n\n\n\n\n\ngdb\u65ad\u70b9\uff1a\n\n\ngdb\n \n-\np\n \n\u8fdb\u7a0bid\n \n-\nx\n \ngdb\n.\ntxt",
             "title": "\u5e38\u7528\u547d\u4ee4"
