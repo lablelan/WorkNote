@@ -10,7 +10,7 @@ pages:
      - RMI远程方法调用: C++/rmicode.md
   - vim:
      - 字符串搜索替换: Vim/replace.md
-     - 文件分屏显示操作: Vim/editfiles.md
+     - 分屏编辑文件: Vim/editfiles.md
   - gdb:
      - 常用命令: gdb/gdb.md
   - sql:
