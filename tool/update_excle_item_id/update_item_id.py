@@ -1,4 +1,4 @@
-# -*- coding: utf-8 _*_
+# -*- coding:utf-8 -*- 
 
 import xlrd
 import xlwt
@@ -82,9 +82,7 @@ if __name__ == '__main__':
         load_dict = json.load(load_f)
         print(load_dict)
         item_list.append(load_dict)
-    #print(getXlsNameList('.'))
     xls_list = getXlsNameList('C:/Users/lan/Desktop/xlsdata/')
-    #xls_list = ['B-Boss.xls']
     
     # 读取需要修改的xls表到xls_dict
     xls_dict = {}
@@ -107,7 +105,6 @@ if __name__ == '__main__':
                     sheet_dict[sheet_name] = cell_list
                     print(xls_name, "  ", sheet_name, "  ", sheet_dict[sheet_name])
                     xls_dict[xls_name] = sheet_dict
-            #print(xls_dict)
 
             # 输出将修改的日志
             with open("./readlog.txt", "w", encoding='utf-8') as f:
